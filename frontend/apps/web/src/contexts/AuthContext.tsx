@@ -60,7 +60,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         };
 
         initAuth();
-    }, [location.pathname]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const login = async (email: string, password: string) => {
         // [1] Mock 모드면 API 호출 아예 안 함 (바로 성공 처리)
